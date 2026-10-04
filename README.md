@@ -10,22 +10,24 @@ else to copy.
 
 ## Install
 
-```bash
-export REQALL_API_KEY="rq_..."         # or rely on OpenCode's MCP OAuth (see below)
-opencode plugin @reqall/opencode-plugin -g
-```
-
-Or add it to `opencode.json` yourself:
+The plugin installs from GitHub; it is not published to npm. Add it to
+`opencode.json` (project) or `~/.config/opencode/opencode.json` (global):
 
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["@reqall/opencode-plugin"]
+  "plugin": ["github:ReqallSystem/opencode_plugin"]
 }
 ```
 
+```bash
+export REQALL_API_KEY="rq_..."         # or rely on OpenCode's MCP OAuth (see below)
+```
+
 Options go in the tuple form, e.g.
-`["@reqall/opencode-plugin", { "autoPersist": "reminder" }]`.
+`["github:ReqallSystem/opencode_plugin", { "autoPersist": "reminder" }]`.
+OpenCode caches the download under `~/.cache/opencode/packages/`; delete the
+`github:ReqallSystem` entry there to pick up a newer `main`.
 
 For a local checkout, add a one-line file at `.opencode/plugins/reqall.js` (or
 `~/.config/opencode/plugins/reqall.js`):
