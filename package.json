@@ -1,0 +1,50 @@
+{
+  "name": "@reqall/opencode-plugin",
+  "version": "2026.10.4",
+  "description": "Reqall plugin for OpenCode — persistent semantic memory via MCP, skills, and lifecycle hooks",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./server": "./index.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs && npm pack --dry-run"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@opencode-ai/plugin": {
+      "optional": true
+    }
+  },
+  "files": [
+    "index.js",
+    "src",
+    "lib",
+    "skills",
+    "REQALL.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "reqall",
+    "opencode",
+    "opencode-plugin",
+    "mcp",
+    "memory",
+    "agent-skills",
+    "project-context"
+  ],
+  "homepage": "https://github.com/ReqallSystem/opencode_plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ReqallSystem/opencode_plugin.git"
+  },
+  "engines": {
+    "node": ">=20",
+    "opencode": ">=1.0.0"
+  },
+  "license": "MIT"
+}
